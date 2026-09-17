@@ -1,17 +1,26 @@
-# Proyecto 3 — Fix de landing (portfolio)
+# Landing Barbería — Fix de formulario + responsive
 
-Landing demo para negocio local con 3 bugs intencionales, típicos de encargos de $10-20 en Fiverr/Workana.
+Demo para negocio local. La tomé con 3 fallos típicos de webs baratas y la dejé lista para producción: sin recargas, con validación y 100% responsive.
 
-## Bugs a corregir (tu práctica)
-1. **Formulario se recarga** — falta `preventDefault`, no valida fecha ni servicio, id `formMessage` no existe (es `form-msg`).
-2. **Responsive roto** — en móvil el hero y las cards se desbordan. La media query está a `200px` y la imagen tiene `width: 600px` fijo.
-3. **UX** — mensaje de error/éxito no se muestra bien por el bug del id.
+**Demo online:** https://polihumilde.github.io/proyecto3-landing-fix/
+*(se activa en Settings > Pages, tarda 1-2 min)*
 
-## Cómo probar
-1. Abre `index.html` en el navegador (doble clic).
-2. Reduce la ventana a tamaño móvil → verás el desborde.
-3. Envía el formulario vacío → verás que se recarga / da error en consola (F12).
+## Qué estaba roto → qué hice
 
-## Tu tarea
-Corrige `script.js` y `styles.css` y deja constancia del antes/después para tu perfil.
-Cuando lo termines, lo revisamos juntos y lo subimos a GitHub.
+| Antes | Después |
+|---|---|
+| El formulario recargaba la página al enviar | `preventDefault()` + validación de nombre, fecha y servicio, mensajes de error/éxito visibles |
+| `getElementById('formMessage')` no existía → error en consola, mensaje nunca aparecía | Corregido a `form-msg`, el id real del HTML |
+| Imagen con `width: 600px` fijo, media query a `200px` → scroll horizontal en móvil | Imagen fluida `width: 100%`, breakpoint a `768px`, cards y hero se apilan en columna |
+
+## Stack
+HTML · CSS (flexbox + media queries) · JavaScript vanilla. Sin frameworks, carga instantánea.
+
+## Cómo verlo
+1. Abre la demo online, o abre `index.html` en local.
+2. Prueba enviar el formulario vacío → verás validación sin recarga.
+3. Reduce a ancho móvil → todo se apila, sin scroll lateral.
+
+## Para clientes
+Hago este tipo de arreglos en 24h: formularios que no envían, webs rotas en celular, errores de JavaScript.
+Contacto por Fiverr / Workana / Upwork.
