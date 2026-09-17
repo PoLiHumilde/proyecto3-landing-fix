@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barbería El Corte — Reserva tu cita</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="logo">Barbería El Corte</div>
+    <nav class="links">
+      <a href="#servicios">Servicios</a>
+      <a href="#precios">Precios</a>
+      <a href="#reserva">Reserva</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Corte clásico, estilo moderno</h1>
+        <p>Reserva en 30 segundos. Sin llamadas, sin espera.</p>
+        <a href="#reserva" class="btn">Reservar ahora</a>
+      </div>
+      <div class="hero-img">
+        <img src="https://picsum.photos/600/400" alt="Barbería" />
+      </div>
+    </section>
+
+    <section id="servicios" class="cards">
+      <div class="card">
+        <h3>Corte clásico</h3>
+        <p>45 min · incluye lavado</p>
+        <strong>$10</strong>
+      </div>
+      <div class="card">
+        <h3>Barba + perfilado</h3>
+        <p>30 min · toalla caliente</p>
+        <strong>$8</strong>
+      </div>
+      <div class="card">
+        <h3>Corte + barba</h3>
+        <p>60 min · promoción</p>
+        <strong>$15</strong>
+      </div>
+    </section>
+
+    <section id="reserva" class="booking">
+      <h2>Reserva tu cita</h2>
+      <form id="booking-form">
+        <label>Nombre
+          <input type="text" id="name" placeholder="Tu nombre" />
+        </label>
+        <label>Fecha
+          <input type="date" id="date" />
+        </label>
+        <label>Servicio
+          <select id="service">
+            <option value="">Elige...</option>
+            <option value="corte">Corte clásico - $10</option>
+            <option value="barba">Barba - $8</option>
+            <option value="combo">Corte + barba - $15</option>
+          </select>
+        </label>
+        <button type="submit" class="btn">Confirmar reserva</button>
+        <p id="form-msg" class="msg"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>© 2026 Barbería El Corte · Demo portfolio</footer>
+  <script src="script.js"></script>
+</body>
+</html>
